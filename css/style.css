@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+.webBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  
+}
+
+.lightTheme {
+  background-color: var(--light);
+}
+
+.darkTheme {
+  background-color: var(--dark);
+}
+
+input {
+  position: relative;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+}
+
+.btn_Off {
+  display: block;
+  height: 100px;
+  width: 200px;
+  background-color: var(--label);
+  border-radius: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.btn_Off:checked {
+  display: block;
+  height: 100px;
+  width: 200px;
+  border-radius: 200px;
+}
+
+.btn_Off::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-color: #fff;
+  position: relative;
+  left: 10px;
+  transition-duration: .5s;
+  z-index: 99;
+}
+
+.btn_Off:checked::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-color: #fff;
+  position: relative;
+  left: 110px;
+  top: 10px;
+  transition-duration: .5s;
+  z-index: 99;
+}
+
+.darkImage{
+  background-image: url('../assets/moon.svg');
+  width: 70px;
+  height: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.lightImage{
+  background-image: url('../assets/sun.svg');
+  width: 70px;
+  height: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.clark {
+  height: 100px;
+  width: 180px;
+  border-radius: 200px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+}
